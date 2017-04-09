@@ -35,12 +35,12 @@ class SlotMachine(object):
 
     def buildReel(self, multi):
         """ Makes the self.reel array """
-        logging.info('Buliding Reel')
+        logger.info('Buliding Reel')
         # make reversed copy of 'base'
         rbase = self.base[::-1]
         # append 'bonus' to 'reversed base'
         rbase.append(self.bonus)
-        # add 'reversed base' to 'base'
+        # add 'reversed base'+'bonus' to 'base'
         nbase = rbase + self.base
         # append another 'bonus' to 'new base'
         nbase.append(self.bonus)
@@ -48,13 +48,13 @@ class SlotMachine(object):
         reel = nbase * int(multi)
         # add jackpot symbol to front
         reel.insert(0, self.jack)
-        # return 'reel' with extra 'bonus' removed
+        # save 'self.reel' with extra 'bonus' removed
         self.reel = reel[:-1]
-        logging.debug(self.reel)
+        logger.debug(self.reel)
 
     def __call__(self):
         """ Pulls the 'handle' """
-        logging.info('Spinning machine')
+        logger.info('Spinning machine')
         # set empty display
         nCols, nRows = range(self.size[0]), range(self.size[1])
         # pick symbols and fill display
@@ -68,9 +68,9 @@ class SlotMachine(object):
         """ Overwrite to fit your machine """
         if line.count(self.jack) == len(line):
             return 'jackpot'
-        elif line.count(self.bonus) == len(line):
+        if line.count(self.bonus) == len(line):
             return 30
-        elif line.count(line[0]) == len(line):
+        if line.count(line[0]) == len(line):
             return 10
         return False
 
@@ -86,6 +86,7 @@ if __name__ == '__main__':
             tally[str(r)] += 1
         print(tally)
     else:
+        logging.basicConfig(logging.INFO)
         r = s()[0]
         print(r)
         print(s.checkLine(r))
