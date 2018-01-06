@@ -14,9 +14,10 @@
 #    You should have received a copy of the GNU General Public License along
 #    with this program; if not, write to the Free Software Foundation, Inc.,
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
-from random import choice
 import logging
+from random import SystemRandom
+# use system based random generator
+random = SystemRandom()
 
 logger = logging.getLogger(__name__)
 
@@ -59,7 +60,7 @@ class SlotMachine(object):
         nCols, nRows = range(self.size[0]), range(self.size[1])
         # pick symbols and fill display
         raw = [[self.reel[i - row] for row in nRows]
-               for i in [choice(range(len(self.reel))) for col in nCols]]
+               for i in [random.choice(range(len(self.reel))) for col in nCols]]
         # return display (turned 90 so it makes more
         # sense and easier to traverse/read)
         return [[col[i] for col in raw] for i in range(len(raw[0]))]
@@ -86,7 +87,7 @@ if __name__ == '__main__':
             tally[str(r)] += 1
         print(tally)
     else:
-        logging.basicConfig(logging.INFO)
+        logging.basicConfig(level=logging.INFO)
         r = s()[0]
         print(r)
         print(s.checkLine(r))
