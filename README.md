@@ -1,4 +1,4 @@
-# python-slots
+# python-slots [![Build Status](https://travis-ci.org/s4w3d0ff/python-slots.svg?branch=master)](https://travis-ci.org/s4w3d0ff/python-slots)
 Simple, expandable, customizable slot machine
 
 `pip install git+https://github.com/s4w3d0ff/python-slots.git`
