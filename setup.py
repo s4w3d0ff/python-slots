@@ -1,6 +1,6 @@
 from setuptools import setup
 setup(name='slotmachine',
-    version='0.0.3.3',
+    version='0.0.3.4',
     description='Simple, expandable, customizable slot machine',
     url='https://github.com/s4w3d0ff/python-slots',
     author='s4w3d0ff',
