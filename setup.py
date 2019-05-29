@@ -1,5 +1,4 @@
 from setuptools import setup
-<<<<<<< HEAD
 try:
     from pypandoc import convert
     read_md = lambda f: convert(f, 'rst')
@@ -11,14 +10,6 @@ setup(name='slotmachine',
     version='0.0.3.5',
     description='Simple, expandable, customizable slot machine',
     long_description=read_md('README.md'),
-=======
-with open('README.md') as file_object:
-    description = file_object.read()
-setup(name='slotmachine',
-    version='0.0.3.4',
-    description='Simple, expandable, customizable slot machine',
-    long_description=description,
->>>>>>> e3477985cd3595ba9e080c37d2b83356809c7123
     url='https://github.com/s4w3d0ff/python-slots',
     author='s4w3d0ff',
     author_email="info@s4w3d0ff.host",
