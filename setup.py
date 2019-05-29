@@ -1,7 +1,10 @@
 from setuptools import setup
+with open('README.md') as file_object:
+    description = file_object.read()
 setup(name='slotmachine',
-    version='0.0.3.3',
+    version='0.0.3.4',
     description='Simple, expandable, customizable slot machine',
+    long_description=description,
     url='https://github.com/s4w3d0ff/python-slots',
     author='s4w3d0ff',
     author_email="info@s4w3d0ff.host",
