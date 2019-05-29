@@ -3,7 +3,7 @@ from setuptools import setup
 read_md = lambda f: open(f, 'r').read()
 
 setup(name='slotmachine',
-    version='0.0.3.5',
+    version='0.0.3.6',
     description='Simple, expandable, customizable slot machine',
     long_description=read_md('README.md'),
     long_description_content_type='text/markdown'
