@@ -3,10 +3,10 @@ from setuptools import setup
 read_md = lambda f: open(f, 'r').read()
 
 setup(name='slotmachine',
-    version='0.0.3.7',
+    version='0.0.3.8',
     description='Simple, expandable, customizable slot machine',
     long_description=read_md('README.md'),
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     url='https://github.com/s4w3d0ff/python-slots',
     author='s4w3d0ff',
     author_email="info@s4w3d0ff.host",
