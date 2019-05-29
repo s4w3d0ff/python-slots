@@ -1,15 +1,12 @@
 from setuptools import setup
-try:
-    from pypandoc import convert
-    read_md = lambda f: convert(f, 'rst')
-except ImportError:
-    print("warning: pypandoc module not found, could not convert Markdown to RST")
-    read_md = lambda f: open(f, 'r').read()
+
+read_md = lambda f: open(f, 'r').read()
 
 setup(name='slotmachine',
     version='0.0.3.5',
     description='Simple, expandable, customizable slot machine',
     long_description=read_md('README.md'),
+    long_description_content_type='text/markdown'
     url='https://github.com/s4w3d0ff/python-slots',
     author='s4w3d0ff',
     author_email="info@s4w3d0ff.host",
