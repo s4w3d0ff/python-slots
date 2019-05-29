@@ -11,7 +11,6 @@ setup(name='slots',
     zip_safe=False,
     keywords=['slots', 'slotmachine', 'slot-machine'],
     classifiers = [
-          'Intended Audience :: Game Developers',
           'Operating System :: MacOS :: MacOS X',
           'Operating System :: Microsoft :: Windows',
           'Operating System :: POSIX',
