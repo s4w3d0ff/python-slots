@@ -19,7 +19,7 @@ install:
 
 script:
   # test import
-  - python -c 'import slots'
+  - python -c 'import slotmachine'
 
 # cashe pip
 cache:

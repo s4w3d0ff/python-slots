@@ -4,8 +4,8 @@ Simple, expandable, customizable slot machine
 `pip install git+https://github.com/s4w3d0ff/python-slots.git`
 
 ```python
-import slots
-slotM = slots.SlotMachine()
+import slotmachine
+slotM = slotmachine.SlotMachine()
 print(slotM())
 # [['!!!', 'BAR', '(M)']]
 
@@ -16,8 +16,8 @@ print(slotM())
 slotM = slots.SlotMachine(jack='BTC', bonus='LTC', size=(5,3))
 print(slotM())
 # [
-#   ['(Z)', '(O)', '(X)', '(M)', '(Z)'], 
-#   ['(O)', '(Z)', '(H)', 'LTC', 'BTC'], 
+#   ['(Z)', '(O)', '(X)', '(M)', '(Z)'],
+#   ['(O)', '(Z)', '(H)', 'LTC', 'BTC'],
 #   ['(H)', 'LTC', '(O)', '(M)', '(Z)']
 # ]
 
