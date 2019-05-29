@@ -9,11 +9,11 @@ slotM = slotmachine.SlotMachine()
 print(slotM())
 # [['!!!', 'BAR', '(M)']]
 
-slotM = slots.SlotMachine(size=(5,1))
+slotM = slotmachine.SlotMachine(size=(5,1))
 print(slotM())
 # [['(H)', '(N)', '!!!', '!!!', '(H)']]
 
-slotM = slots.SlotMachine(jack='BTC', bonus='LTC', size=(5,3))
+slotM = slotmachine.SlotMachine(jack='BTC', bonus='LTC', size=(5,3))
 print(slotM())
 # [
 #   ['(Z)', '(O)', '(X)', '(M)', '(Z)'],
@@ -24,7 +24,7 @@ print(slotM())
 print(slotM.reel)
 # ['BTC', '(Z)', '(O)', '(H)', '(X)', '(W)', '(N)', '(M)', 'LTC', '(M)', '(N)', '(W)', '(X)', '(H)', '(O)', '(Z)', 'LTC', '(Z)', '(O)', '(H)', '(X)', '(W)', '(N)', '(M)', 'LTC', '(M)', '(N)', '(W)', '(X)', '(H)', '(O)', '(Z)', 'LTC', '(Z)', '(O)', '(H)', '(X)', '(W)', '(N)', '(M)', 'LTC', '(M)', '(N)', '(W)', '(X)', '(H)', '(O)', '(Z)']
 
-slotM = slots.SlotMachine(size=(5,1))
+slotM = slotmachine.SlotMachine(size=(5,1))
 r = slotM()
 print(r)
 # [['(X)', '(W)', '(M)', '!!!', '(N)']]
